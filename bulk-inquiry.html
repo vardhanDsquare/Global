@@ -31,12 +31,14 @@ tailwind.config = {
 <body class="font-sans bg-gray-50 text-slate-900">
 
 <!-- HEADER (Standard Across All Pages) -->
-<header class="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
-<div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+<!-- RESPONSIVE HEADER -->
+<header class="sticky top-0 bg-white border-b border-gray-200 shadow-sm z-50">
+<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
-<img src="assets\images\logo.png"
-alt="Vardhan D Square Logo" class="h-14">
+<!-- Logo -->
+<img src="assets/images/logo.png" alt="Logo" class="h-12">
 
+<!-- Desktop Nav -->
 <nav class="hidden md:flex gap-8 text-sm font-semibold uppercase tracking-wider">
 <a href="index.html" class="hover:text-primary">Home</a>
 <a href="about.html" class="hover:text-primary">About</a>
@@ -46,11 +48,35 @@ alt="Vardhan D Square Logo" class="h-14">
 <a href="contact.html" class="hover:text-primary">Contact</a>
 </nav>
 
+<!-- Desktop Button -->
 <a href="bulk-inquiry.html"
-class="bg-primary text-white px-6 py-2 text-sm font-bold rounded hover:bg-accent transition">
+class="hidden md:inline-block bg-primary text-white px-6 py-2 text-sm font-bold rounded hover:bg-accent transition">
 Bulk Inquiry
 </a>
 
+<!-- Mobile Menu Button -->
+<button id="menu-btn" class="md:hidden text-primary focus:outline-none">
+<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+d="M4 6h16M4 12h16M4 18h16"/>
+</svg>
+</button>
+
+</div>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+<div class="flex flex-col px-6 py-4 space-y-4 text-sm font-semibold uppercase">
+<a href="index.html" class="hover:text-primary">Home</a>
+<a href="about.html" class="hover:text-primary">About</a>
+<a href="products.html" class="hover:text-primary">Products</a>
+<a href="manufacturing.html" class="hover:text-primary">Manufacturing</a>
+<a href="industries.html" class="hover:text-primary">Industries</a>
+<a href="contact.html" class="hover:text-primary">Contact</a>
+<a href="bulk-inquiry.html" class="bg-primary text-white text-center py-2 rounded">
+Bulk Inquiry
+</a>
+</div>
 </div>
 </header>
 
@@ -199,5 +225,14 @@ Industrial supplier of dehydrated vegetable ingredients and bulk spice inputs ba
 </div>
 </footer>
  <script src="assets\js\main.js"></script>
+  <script>
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+menuBtn.addEventListener('click', () => {
+mobileMenu.classList.toggle('hidden');
+});
+</script>
 </body>
+
 </html>
