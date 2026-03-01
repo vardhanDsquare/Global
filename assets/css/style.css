@@ -1,0 +1,150 @@
+/* =============================
+   VARDHAN D SQUARE ENTERPRISE
+   GLOBAL INDUSTRIAL THEME
+============================= */
+
+:root {
+  --primary: #1b4332;        /* Deep industrial green */
+  --dark: #2d2d2d;           /* Charcoal */
+  --light: #f5f7f6;          /* Light background */
+  --accent: #14532d;         /* Darker green */
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--white);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+/* =============================
+   NAVBAR
+============================= */
+
+header {
+  background: var(--white);
+  border-bottom: 1px solid #e5e5e5;
+  padding: 18px 8%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+/* =============================
+   HERO SECTION
+============================= */
+
+.hero {
+  background: linear-gradient(rgba(27,67,50,0.9), rgba(27,67,50,0.9)),
+              url('../images/onion.png');
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
+  padding: 120px 8%;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  max-width: 600px;
+}
+
+/* =============================
+   SECTION
+============================= */
+
+.section {
+  padding: 80px 8%;
+}
+
+.section-light {
+  background: var(--light);
+}
+
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: var(--primary);
+}
+
+/* =============================
+   GRID
+============================= */
+
+.grid {
+  display: grid;
+  gap: 30px;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+  background: var(--white);
+  padding: 30px;
+  border: 1px solid #e5e5e5;
+  transition: 0.3s;
+}
+
+.card:hover {
+  border-color: var(--primary);
+}
+
+/* =============================
+   BUTTON
+============================= */
+
+.btn {
+  display: inline-block;
+  padding: 14px 30px;
+  background: var(--primary);
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background: var(--accent);
+}
+
+/* =============================
+   FOOTER
+============================= */
+
